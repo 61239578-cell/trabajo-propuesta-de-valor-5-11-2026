@@ -60,77 +60,60 @@ window.CONFIG = {
     { k: 'lk7', t: 'Enterizo fluido negro', alt: 'Mujer con enterizo negro de corte fluido' }
   ],
 
+  // Producto nuevo en la hoja Catalogo sin foto aquí: la tienda busca assets/img/catalogo_nuevo/<id>.webp
+  // o usa la columna "imagen" de la hoja (ruta o URL https://).
+  CARPETA_FOTOS: 'assets/img/catalogo_nuevo/',
+
   IMAGENES: {
     // --- Inicio ---
     hero: 'assets/img/hero.webp',
-    cat_vestido: 'assets/img/cat_vestido.webp',
-    cat_top: 'assets/img/cat_top.webp',
-    cat_casaca: 'assets/img/cat_casaca.webp',
-    cat_pantalon: 'assets/img/cat_pantalon.webp',
     // --- Tienda ---
     tienda: 'assets/img/tienda.webp',
-    // vestidos: Envolvente, Línea A, Midi fluido
-    v1: 'assets/img/catalogo_nuevo/v1.jpg',
-    // Variantes de color del vestido envolvente: misma modelo, pose y prenda; cambia solo el tono de la tela.
-    v1_Terracota: 'assets/img/catalogo_nuevo/v1_Terracota.jpg',
-    v1_Verde: 'assets/img/catalogo_nuevo/v1_Verde.jpg',
-    v1_Negro: 'assets/img/catalogo_nuevo/v1_Negro.jpg',
-    v1_Azul: 'assets/img/catalogo_nuevo/v1_Azul.jpg',
-    v4: 'assets/img/catalogo_nuevo/v4.jpg',
-    v2: 'assets/img/catalogo_nuevo/v2.jpg',
-    v3: 'assets/img/catalogo_nuevo/v3.jpg',
-    // tops: Blusa fluida, Polo básico, Camisa oversize, Top cruzado, Blusa manga larga, Suéter tejido
-    b1: 'assets/img/catalogo_nuevo/b1.jpg',
-    b2: 'assets/img/catalogo_nuevo/b3.jpg', // polo blanco
-    b3: 'assets/img/catalogo_nuevo/b2.jpg', // blusa satinada
-    b4: 'assets/img/catalogo_nuevo/b4.jpg', // polo negro
-    b5: 'assets/img/catalogo_nuevo/b1.jpg', // foto de modelo disponible; falta foto específica
-    b6: 'assets/img/catalogo_nuevo/b6.jpg',
-    // casacas: Larga, Estructurada, Blazer largo, Cárdigan largo, Bomber urbana
-    c1: 'assets/img/catalogo_nuevo/c1.jpg',
-    c2: 'assets/img/catalogo_nuevo/c2.jpg',
-    c3: 'assets/img/catalogo_nuevo/c2.jpg', // se conserva la mejor foto disponible para blazer
-    c4: 'assets/img/catalogo_nuevo/c4.jpg',
-    c5: 'assets/img/catalogo_nuevo/c2.jpg', // imagen disponible de casaca; falta foto específica bomber
-
-    // pantalones: Tiro alto, Recto, Fluido, Cargo, Sastre
-    p1: 'assets/img/catalogo_nuevo/p1.jpg',
-    p2: 'assets/img/catalogo_nuevo/p2.jpg',
-    p3: 'assets/img/catalogo_nuevo/p3.jpg',
-    p4: 'assets/img/catalogo_nuevo/p1.jpg', // foto de modelo disponible; falta foto específica cargo
-    p5: 'assets/img/catalogo_nuevo/p2.jpg', // foto de modelo disponible; falta foto específica sastre
-    p6: 'assets/img/catalogo_nuevo/p6.jpg',
-    // --- Nueva colección masculina ---
-    // Asignación por tipo de prenda (los nombres m1–m19 del archivo original siguen intactos).
-    m1:'assets/img/catalogo_nuevo/m1.jpg',   // polo negro
-    m2:'assets/img/catalogo_nuevo/m4.jpg',   // camisa celeste
-    m3:'assets/img/catalogo_nuevo/m8.jpg',   // pantalón chino beige
-    m4:'assets/img/catalogo_nuevo/m14.jpg',  // casaca impermeable
-    m5:'assets/img/catalogo_nuevo/m6.jpg',   // polo deportivo
-    m6:'assets/img/catalogo_nuevo/m10.jpg',  // jogger deportivo
-    m7:'assets/img/catalogo_nuevo/m3.jpg',   // polo negro clásico
-    m8:'assets/img/catalogo_nuevo/m15.jpg',  // casaca verde urbana
-    m9:'assets/img/catalogo_nuevo/m12.jpg',  // suéter
-    m10:'assets/img/catalogo_nuevo/m11.jpg', // short deportivo
-    m11:'assets/img/catalogo_nuevo/m13.jpg', // polerón con capucha
-    m12:'assets/img/catalogo_nuevo/m18.jpg', // mochila
-    m13:'assets/img/catalogo_nuevo/m2.jpg',  // polo blanco
-    m14:'assets/img/catalogo_nuevo/m5.jpg',  // camisa a cuadros
-    m15:'assets/img/catalogo_nuevo/m9.jpg',  // pantalón negro
-    m16:'assets/img/catalogo_nuevo/m16.jpg', // casaca beige
-    m17:'assets/img/catalogo_nuevo/m17.jpg', // gorra
-    m18:'assets/img/catalogo_nuevo/m19.jpg', // zapatillas blancas
-    m19:'assets/img/catalogo_nuevo/m7.jpg',  // polo deportivo ligero
-    // Imágenes de categorías: fotografías reales, no siluetas SVG.
-    cat_vestido:'assets/img/catalogo_nuevo/v1.jpg',
-    cat_top:'assets/img/catalogo_nuevo/b1.jpg',
-    cat_camisa:'assets/img/catalogo_nuevo/m4.jpg',
-    cat_casaca:'assets/img/catalogo_nuevo/m14.jpg',
-    cat_pantalon:'assets/img/catalogo_nuevo/p1.jpg',
-    cat_short:'assets/img/catalogo_nuevo/m11.jpg',
-    cat_deportivo:'assets/img/catalogo_nuevo/m6.jpg',
-    cat_accesorio:'assets/img/catalogo_nuevo/m18.jpg',
-    cat_falda:'assets/img/catalogo_nuevo/p6.jpg',
+    // ---- Prendas (cada id usa la foto que realmente muestra esa prenda) ----
+    // vestidos
+    v1: 'assets/img/catalogo_nuevo/v1_Terracota.webp', // el primer color de v1 es Terracota, así la tarjeta coincide con su punto de color
+    v1_Terracota: 'assets/img/catalogo_nuevo/v1_Terracota.webp',
+    v1_Verde: 'assets/img/catalogo_nuevo/v1_Verde.webp',
+    v1_Negro: 'assets/img/catalogo_nuevo/v1_Negro.webp',
+    v1_Azul: 'assets/img/catalogo_nuevo/v1_Azul.webp',
+    v2: 'assets/img/catalogo_nuevo/v2.webp',
+    v3: 'assets/img/catalogo_nuevo/v3.webp',
+    v4: 'assets/img/catalogo_nuevo/v4.webp',
+    // tops (b4 y b5 comparten foto de modelo: falta foto específica)
+    b1: 'assets/img/catalogo_nuevo/b1.webp',
+    b2: 'assets/img/catalogo_nuevo/b2.webp',   // polo blanco
+    b3: 'assets/img/catalogo_nuevo/b3.webp',   // blusa satinada (falta foto específica de camisa oversize)
+    b4: 'assets/img/catalogo_nuevo/b4.webp',   // polo negro (falta foto específica de top cruzado)
+    b5: 'assets/img/catalogo_nuevo/b1.webp',   // falta foto específica de blusa manga larga
+    b6: 'assets/img/catalogo_nuevo/b6.webp',
+    // casacas
+    c1: 'assets/img/catalogo_nuevo/c1.webp',
+    c2: 'assets/img/catalogo_nuevo/c2.webp',
+    c3: 'assets/img/catalogo_nuevo/c2.webp',   // falta foto específica de blazer
+    c4: 'assets/img/catalogo_nuevo/c4.webp',
+    c5: 'assets/img/catalogo_nuevo/c2.webp',   // falta foto específica de bomber
+    // pantalones y faldas
+    p1: 'assets/img/catalogo_nuevo/p1.webp',
+    p2: 'assets/img/catalogo_nuevo/p2.webp',
+    p3: 'assets/img/catalogo_nuevo/p3.webp',
+    p4: 'assets/img/catalogo_nuevo/p1.webp',   // falta foto específica de cargo
+    p5: 'assets/img/catalogo_nuevo/p2.webp',   // falta foto específica de sastre
+    p6: 'assets/img/catalogo_nuevo/p6.webp',
+    // ---- Colección masculina: el archivo mN.webp muestra la prenda del producto mN ----
+    m1:'assets/img/catalogo_nuevo/m1.webp', m2:'assets/img/catalogo_nuevo/m2.webp', m3:'assets/img/catalogo_nuevo/m3.webp', m4:'assets/img/catalogo_nuevo/m4.webp', m5:'assets/img/catalogo_nuevo/m5.webp',
+    m6:'assets/img/catalogo_nuevo/m6.webp', m7:'assets/img/catalogo_nuevo/m7.webp', m8:'assets/img/catalogo_nuevo/m8.webp', m9:'assets/img/catalogo_nuevo/m9.webp', m10:'assets/img/catalogo_nuevo/m10.webp',
+    m11:'assets/img/catalogo_nuevo/m11.webp', m12:'assets/img/catalogo_nuevo/m12.webp', m13:'assets/img/catalogo_nuevo/m13.webp', m14:'assets/img/catalogo_nuevo/m14.webp', m15:'assets/img/catalogo_nuevo/m15.webp',
+    m16:'assets/img/catalogo_nuevo/m16.webp', m17:'assets/img/catalogo_nuevo/m17.webp', m18:'assets/img/catalogo_nuevo/m18.webp', m19:'assets/img/catalogo_nuevo/m19.webp',
+    // ---- Imágenes de categorías (Inicio) ----
+    cat_vestido:'assets/img/catalogo_nuevo/v1_Terracota.webp',
+    cat_top:'assets/img/catalogo_nuevo/b1.webp',
+    cat_camisa:'assets/img/catalogo_nuevo/m2.webp',
+    cat_casaca:'assets/img/catalogo_nuevo/c1.webp',
+    cat_pantalon:'assets/img/catalogo_nuevo/p1.webp',
+    cat_short:'assets/img/catalogo_nuevo/m10.webp',
+    cat_deportivo:'assets/img/catalogo_nuevo/m11.webp',
+    cat_accesorio:'assets/img/catalogo_nuevo/m12.webp',
+    cat_falda:'assets/img/catalogo_nuevo/p6.webp',
     // --- Looks de temporada ---
     lk1: 'assets/img/lk1.webp', lk2: 'assets/img/lk2.webp', lk3: 'assets/img/lk3.webp',
     lk4: 'assets/img/lk4.webp', lk7: 'assets/img/lk7.webp',
